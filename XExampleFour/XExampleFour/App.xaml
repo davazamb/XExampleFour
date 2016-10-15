@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:XExampleFour.Infrastructure;assembly=XExampleFour"
              x:Class="XExampleFour.App">
   <Application.Resources>
     <ResourceDictionary>
@@ -13,6 +14,8 @@
           <!-- Menu colors -->
       <Color x:Key="MenuColor">#002a4a</Color>
       <Color x:Key="MenuFontColor">#fff1ce</Color>
+      <!-- Locator -->
+      <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
 
     </ResourceDictionary>
   </Application.Resources>
