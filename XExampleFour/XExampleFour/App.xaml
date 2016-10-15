@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XExampleFour.App">
+  <Application.Resources>
+    <ResourceDictionary>
+          <!-- General colors -->      
+      <Color x:Key="MainColor">#ff9311</Color>
+      <Color x:Key="FontColor">#002a4a</Color>
+      <Color x:Key="AccentColor1">#17607d</Color>
+      <Color x:Key="AccentColor2">#d64700</Color>
+      <Color x:Key="BackgroundColor">#fff1ce</Color>
+          <!-- Menu colors -->
+      <Color x:Key="MenuColor">#002a4a</Color>
+      <Color x:Key="MenuFontColor">#fff1ce</Color>
+
+    </ResourceDictionary>
+  </Application.Resources>
+
+</Application>
