@@ -6,6 +6,7 @@
              BackgroundColor="{StaticResource BackgroundColor}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
   <ListView
+    ItemTemplate="{StaticResource OrderItemTemplate}"
     ItemsSource="{Binding Orders}"
     HasUnevenRows="True">
     <ListView.ItemTemplate>

@@ -10,15 +10,13 @@
     VerticalOptions="Center"
     HorizontalOptions="Center">
     <Label
-      TextColor="{StaticResource MenuFontColor}"
+      TextColor="{StaticResource AccentColor1}"
       FontSize="20"
       Text="Bienveni@s"/>
     <Button
       Command="{Binding StartCommand}"
       HeightRequest="40"
       BorderRadius="20"
-      BackgroundColor="{StaticResource MenuFontColor}"
-      TextColor="{StaticResource MainColor}"
       Text="Iniciar"/>
   </StackLayout>
 

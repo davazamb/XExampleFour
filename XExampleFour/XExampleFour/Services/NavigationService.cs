@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 using XExampleFour.Pages;
 
 namespace XExampleFour.Services
@@ -35,6 +36,10 @@ namespace XExampleFour.Services
             }
         }
 
+        internal void SetMainPage(Page page)
+        {
+            App.Current.MainPage = page;
+        }
     }
 
 }

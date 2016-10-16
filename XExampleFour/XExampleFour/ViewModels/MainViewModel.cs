@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Forms;
 using XExampleFour.Pages;
 using XExampleFour.Services;
 
@@ -46,10 +47,7 @@ namespace XExampleFour.ViewModels
         #endregion
 
         #region Methods
-        internal void SetMainPage(Page page)
-        {
-            App.Current.MainPage = page;
-        }
+
 
         private void LoadData()
         {
