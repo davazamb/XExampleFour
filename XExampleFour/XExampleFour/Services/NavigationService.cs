@@ -16,17 +16,17 @@ namespace XExampleFour.Services
 
             switch (PageName)
             {
-                case "AlarmsPage":
-                    await App.Navigator.PushAsync(new AlarmsPage());
+                case "ProductPage":
+                    await App.Navigator.PushAsync(new ProductPage());
                     break;
-                case "ClientsPage":
-                    await App.Navigator.PushAsync(new ClientsPage());
+                case "ConsultPage":
+                    await App.Navigator.PushAsync(new ConsultPage());
                     break;
                 case "SettingsPage":
                     await App.Navigator.PushAsync(new SettingsPage());
                     break;
-                case "NewOrderPage":
-                    await App.Navigator.PushAsync(new NewOrderPage());
+                case "NewProductPage":
+                    await App.Navigator.PushAsync(new NewProductPage());
                     break;
                 case "MainPage":
                     await App.Navigator.PopToRootAsync();

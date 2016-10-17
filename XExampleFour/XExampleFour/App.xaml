@@ -6,9 +6,9 @@
   <Application.Resources>
     <ResourceDictionary>
           <!-- General colors -->      
-      <Color x:Key="MainColor">#ff9311</Color>
+      <Color x:Key="MainColor">#17607d</Color>
       <Color x:Key="FontColor">#002a4a</Color>
-      <Color x:Key="AccentColor1">#17607d</Color>
+      <Color x:Key="AccentColor1">#ff9311</Color>
       <Color x:Key="AccentColor2">#d64700</Color>
       <Color x:Key="BackgroundColor">#fff1ce</Color>
           <!-- Menu colors -->
@@ -35,7 +35,7 @@
         <ColumnDefinition Width="*"></ColumnDefinition>
       </Grid.ColumnDefinitions>
       <Image
-        Source="icon.png"
+        Source="logo.png"
         VerticalOptions="Start"
         WidthRequest="50"
         HeightRequest="50"/>

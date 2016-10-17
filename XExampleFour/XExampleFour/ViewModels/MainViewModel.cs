@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using XExampleFour.Classes;
 using XExampleFour.Pages;
 using XExampleFour.Services;
 
@@ -16,18 +17,20 @@ namespace XExampleFour.ViewModels
     {
         #region Attributes
         private NavigationService navigationService;
+        //private List<Product> products;
         #endregion
 
         #region Properties
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
         public ObservableCollection<OrderViewModel> Orders { get; set; }
+        public ObservableCollection<Service> Services { get; set; }
         #endregion
         #region Constructors
         public MainViewModel()
         {
             navigationService = new NavigationService();
             LoadMenu();
-            LoadData();
+            //LoadData();
         }
         #endregion
         #region Commands
@@ -49,20 +52,39 @@ namespace XExampleFour.ViewModels
         #region Methods
 
 
-        private void LoadData()
-        {
-            Orders = new ObservableCollection<OrderViewModel>();
+        //private void LoadData()
+        //{
+        //    Orders = new ObservableCollection<OrderViewModel>();
 
-            for (int i = 0; i < 10; i++)
-            {
-                Orders.Add(new OrderViewModel
-                {
-                    Title = "Hola, Buen dia",
-                    DeliveryDate = DateTime.Today,
-                    Description = "Haciendo uso de xamarin app, TecnicomputoZ",
-                });
-            }
-        }
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Orders.Add(new OrderViewModel
+        //        {
+        //            Title = "Hola, Buen dia",
+        //            DeliveryDate = DateTime.Today,
+        //            Description = "Haciendo uso de xamarin app, TecnicomputoZ",
+        //        });
+        //    }
+        //}
+        //private void LoadData()
+        //{
+        //    using (var da = new DataAccess())
+        //    {
+        //        products = da.GetList<Product>(false).OrderBy(p => p.Description).ToList();
+        //    }
+
+        //    foreach (var Service in Services)
+        //    {
+        //        Services.Add(new Service
+        //        {
+        //            DateRegistered = Service.DateRegistered,
+        //            Product = Service.Product,
+        //            Quantity = Service.Quantity,
+        //            Price = Service.Value,
+        //        });
+        //    }
+        //    navigationService.SetMainPage(new MasterPage());
+        //}
 
 
         private void LoadMenu()
@@ -71,23 +93,22 @@ namespace XExampleFour.ViewModels
 
             Menu.Add(new MenuItemViewModel
             {
+                Icon = "logo.png",
+                Title = "Servicios",
+            });
+
+            Menu.Add(new MenuItemViewModel
+            {
                 Icon = "ic_action_orders.png",
-                PageName = "MainPage",
-                Title = "Pedidos",
+                PageName = "ProductPage",
+                Title = "Productos",
             });
 
             Menu.Add(new MenuItemViewModel
             {
                 Icon = "ic_action_client.png",
-                PageName = "ClientsPage",
-                Title = "Clientes",
-            });
-
-            Menu.Add(new MenuItemViewModel
-            {
-                Icon = "ic_action_alarm.png",
-                PageName = "AlarmsPage",
-                Title = "Alarmas",
+                PageName = "ConsultPage",
+                Title = "Consultas",
             });
 
             Menu.Add(new MenuItemViewModel

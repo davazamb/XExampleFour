@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XExampleFour.Pages.EditProductsPage"
+             Title="Editar Producto">
+  <ScrollView>
+    <StackLayout Spacing="10" Padding="15">
+      <Entry x:Name="descriptionEntry"
+             Placeholder="ingrese descripcion"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+      <Entry x:Name="priceEntry"
+             Placeholder="ingrese precio"
+             Keyboard="Numeric"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="updateButton"
+                Text="Actualizar"
+                BackgroundColor="Yellow"
+                TextColor="Black"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"/>
+        <Button x:Name="deleteButton"
+                Text="Eliminar"
+                BackgroundColor="Red"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"/>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+
+</ContentPage>

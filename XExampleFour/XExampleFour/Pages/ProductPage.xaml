@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XExampleFour.Pages.ProductPage"
+             Title="Nuevo Producto"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+  <ScrollView>
+    <StackLayout Padding="8">
+      <Entry x:Name="descriptionEntry"
+       Placeholder="ingrese descripcion"
+       HorizontalOptions="FillAndExpand"
+       VerticalOptions="Center"/>
+      <Entry x:Name="priceEntry"
+             Placeholder="ingrese precio"
+             Keyboard="Numeric"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"/>
+      <Button x:Name="addButton"
+              Text="Agregar"
+              BackgroundColor="Yellow"
+              TextColor="Black"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="Center"/>
+      <ListView x:Name="productsListView"/>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

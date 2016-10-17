@@ -2,48 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XExampleFour.Pages.MainPage"
-             Title="Mis Pedidos"
+             Title="Mis Servicios"
              BackgroundColor="{StaticResource BackgroundColor}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
-  <ListView
-    ItemTemplate="{StaticResource OrderItemTemplate}"
-    ItemsSource="{Binding Orders}"
-    HasUnevenRows="True">
-    <ListView.ItemTemplate>
-      <DataTemplate>
-        <ViewCell>
-          <Grid Padding="8">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto"></ColumnDefinition>
-              <ColumnDefinition Width="*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Image
-              Source="logo.png"
-              VerticalOptions="Start"
-              WidthRequest="50"
-              HeightRequest="50"/>
-            <StackLayout Grid.Column="1">
-              <Label
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                TextColor="{StaticResource FontColor}"
-                Text="{Binding Title}"/>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource FontColor}"
-                Text="{Binding Description}"/>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding DeliveryDate, StringFormat='{0:yyyy/MM/dd}'}"/>
-            </StackLayout>
-          </Grid>
-        </ViewCell>
-      </DataTemplate>
-    </ListView.ItemTemplate>
-  </ListView>
+  <ScrollView>
+    <StackLayout Spacing="10" Padding="15">
+      <ListView x:Name="servicesListView"/>
+    </StackLayout>
+  </ScrollView>
 
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage"/>
+    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="NewProductPage"/>
   </ContentPage.ToolbarItems>
 </ContentPage>

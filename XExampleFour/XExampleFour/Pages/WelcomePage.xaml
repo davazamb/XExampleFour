@@ -9,6 +9,7 @@
     Spacing="20"
     VerticalOptions="Center"
     HorizontalOptions="Center">
+    <Image Source="logo.png"></Image>
     <Label
       TextColor="{StaticResource AccentColor1}"
       FontSize="20"
